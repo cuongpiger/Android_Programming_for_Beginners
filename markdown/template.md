@@ -7,7 +7,7 @@
 <center style="color: blue; font-size: 40px; font-weight: 900">
 
   Title
-  \- Speaker -
+  <span style="color: gray">\- Speaker -</span>
 
 </center>
 
