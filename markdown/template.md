@@ -16,3 +16,9 @@
 
 |Timeline|<center>Script</center>|
 |:-:|-|
+
+<hr>
+
+|Word|Pronunciation|
+|-|-|
+|||
