@@ -19,6 +19,6 @@
 
 <hr>
 
-|Word|Type|Pronunciation|
+|Word|Type|Spelling|
 |-|:-:|-|
 ||||
