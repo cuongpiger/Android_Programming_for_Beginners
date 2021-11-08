@@ -9,24 +9,25 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="363dp"
-        android:layout_height="219dp"
+        android:layout_width="265dp"
+        android:layout_height="225dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.479"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -37,8 +38,8 @@
         android:text="Back to the menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.197" />
 </androidx.constraintlayout.widget.ConstraintLayout>
