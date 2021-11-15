@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-public class DialogNewNote {
+import androidx.fragment.app.DialogFragment;
+
+public class DialogNewNote extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -24,6 +26,33 @@ public class DialogNewNote {
         Button btnCancel = dialogView.findViewById(R.id.btnCancel);
         Button btnOK = dialogView.findViewById(R.id.btnOK);
         builder.setView(dialogView).setMessage("Add a new note");
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss(); // close this dialog
+            }
+        });
+
+        btnOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Note newNote = new Note();
+                newNote.setTitle(editTitle.getText().toString());
+                newNote.setDescription(editDescription.getText().toString());
+                newNote.setIdea(checkBoxIdea.isChecked());
+                newNote.setTodo(checkBoxTodo.isChecked());
+                newNote.setImportant(checkBoxImportant.isChecked());
+
+                // Get a reference to MainActivity
+                MainActivity callingActivity = (MainActivity) getActivity();
+                // Pass newNote back to MainActivity
+                callingActivity.createNewNote(newNote);
+
+                // Quit the dialog
+                dismiss();
+            }
+        });
 
 
         return builder.create();
